@@ -17,6 +17,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20
+          registry-url: 'https://registry.npmjs.org'
 
       - uses: pnpm/action-setup@v2
         with:
@@ -29,7 +30,7 @@ jobs:
         run: pnpm build:ci
 
       - name: Publish to NPM
-        run: pnpm publish
+        run: pnpm publish --access public
         working-directory: dist
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
