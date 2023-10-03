@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>@flowui/vanilla-context-menu</title>
+  </head>
+  <body>
+    <div class="target">Right Click</div>
+    <script src="../dist/umd/vanilla-context-menu.min.js"></script>
+    <script>
+      FlowUI.createContextMenu({
+        target: ".target",
+        menuItems: [
+          [
+            {
+              label: "Cut",
+              events: { click: () => console.log("Cut") },
+            },
+            {
+              label: "Copy",
+              events: { click: () => console.log("Copy") },
+            },
+            {
+              label: "Paste",
+              events: { click: () => console.log("Paste") },
+            },
+          ],
+          [
+            {
+              label: "Download",
+              events: { click: () => console.log("Download") },
+            },
+          ],
+          [
+            {
+              label: "Delete",
+              events: { click: () => console.log("Delete") },
+            },
+          ],
+        ],
+      });
+    </script>
+  </body>
+</html>

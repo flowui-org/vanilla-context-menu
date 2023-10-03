@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "declaration": false,
+    "isolatedModules": true,
+    "module": "CommonJS",
+    "target": "ES2017",
+    "moduleResolution": "Node",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
+    "outDir": "./dist"
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "examples"
+  ]
+}
