@@ -1,6 +1,6 @@
 {
   "name": "@flowui/vanilla-context-menu",
-  "version": "0.15.0",
+  "version": "0.17.0",
   "description": "This package offers an API that enables the addition of Custom Context Menus in a browser.",
   "main": "cjs/index.js",
   "module": "esm/index.js",

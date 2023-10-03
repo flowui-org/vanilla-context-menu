@@ -26,7 +26,7 @@ createContextMenu({
 ### UMD
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@flowui/vanilla-context-menu/vanilla-context-menu.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@flowui/vanilla-context-menu/umd/vanilla-context-menu.min.js"></script>
 <script>
   FlowUI.createContextMenu({
     target: ".selector",

@@ -22,22 +22,22 @@ export type ContextMenuOptions = {
 const styles = `
 .contextMenu {
   --menu-border: rgba(255, 255, 255, 0.08);
-  --menu-bg: linear-gradient(45deg, rgba(10, 20, 28, 0.2) 0%, rgba(10, 20, 28, 0.7) 100%);
+  --menu-bg: rgba(10, 20, 28, 0.7);
   --item-border: rgba(255, 255, 255, 0.1);
   --item-color: #fff;
   --item-bg-hover: rgba(255, 255, 255, 0.1);
   height: 0;
+  min-width: 8rem;
   overflow: hidden;
   background: var(--menu-bg);
-  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   position: fixed;
   top: var(--top);
   left: var(--left);
-  -webkit-animation: menuAnimation 0.4s 0s both;
   animation: menuAnimation 0.4s 0s both;
+  -webkit-animation: menuAnimation 0.4s 0s both;
   transform-origin: left;
-  list-style: none;
   margin: 4px;
   padding: 0;
   display: flex;
@@ -51,8 +51,7 @@ const styles = `
 }
 
 .contextMenu-item[data-divider]:not(:last-child) {
-  border-color: var(--item-border);
-  border-bottom: 1px solid ;
+  border-bottom: 1px solid var(--item-border);
 }
 
 .contextMenu-button {
@@ -72,7 +71,6 @@ const styles = `
   -webkit-animation: menuItemAnimation 0.2s 0s both;
   animation: menuItemAnimation 0.2s 0s both;
 
-  font-family: "Inter", sans-serif;
   cursor: pointer;
 }
 
@@ -80,10 +78,10 @@ const styles = `
   background-color: var(--item-bg-hover);
 }
 
-.contextMenu[data-theme=light] {
-  --menu-bg: linear-gradient(45deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.85) 100%);
+.contextMenu[data-appearance=light] {
+  --menu-bg: rgba(255, 255, 255, 0.85);
   --menu-border: rgba(0, 0, 0, 0.08);
-  --item-border: rgba(0, 0, 0, 0.1);
+  --item-border: rgba(30, 30, 30, 0.1);
   --item-color: rgb(10, 20, 28);
   --item-bg-hover: rgba(10, 20, 28, 0.09);
 }

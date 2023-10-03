@@ -140,6 +140,14 @@ const updatePackageVersion = step("Upgrade version", async () => {
   await fse.writeJson(path.join(rootDirectory, "package.json"), packageJson, {
     spaces: 2,
   });
+  await fse.copy(
+    path.join(rootDirectory, "LICENSE"),
+    path.join(distributionDirectory, "LICENSE"),
+  );
+  await fse.copy(
+    path.join(rootDirectory, "README.md"),
+    path.join(distributionDirectory, "README.md"),
+  );
 });
 
 step("Build library", async () => {
